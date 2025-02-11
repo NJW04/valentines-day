@@ -1,0 +1,15 @@
+[Unit]
+Description=Valentine JS App
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/node /home/netrunner/Documents/valentine/app.js
+WorkingDirectory=/home/netrunner/Documents/valentine
+Restart=always
+User=your-netrunner
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=development
+
+
+[Install]
+WantedBy=multi-user.target
